@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Cyberpunk2077QuizReact/static/css/main.f0e87fc2.css",
+    "main.js": "/Cyberpunk2077QuizReact/static/js/main.99f76ea4.js",
+    "static/media/screen-high-speed-high-stakes-en.jpg": "/Cyberpunk2077QuizReact/static/media/screen-high-speed-high-stakes-en.959d7e0dd994506ce000.jpg",
+    "static/media/screen-trauma-team-en.jpg": "/Cyberpunk2077QuizReact/static/media/screen-trauma-team-en.4e1426e566d75ce0165c.jpg",
+    "static/media/screen-its-a-deal-en.jpg": "/Cyberpunk2077QuizReact/static/media/screen-its-a-deal-en.7d5765193180997e2f58.jpg",
+    "static/media/screen-just-around-the-corner-en.jpg": "/Cyberpunk2077QuizReact/static/media/screen-just-around-the-corner-en.75e017738df9117e1782.jpg",
+    "index.html": "/Cyberpunk2077QuizReact/index.html",
+    "main.f0e87fc2.css.map": "/Cyberpunk2077QuizReact/static/css/main.f0e87fc2.css.map",
+    "main.99f76ea4.js.map": "/Cyberpunk2077QuizReact/static/js/main.99f76ea4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0e87fc2.css",
+    "static/js/main.99f76ea4.js"
+  ]
+}
