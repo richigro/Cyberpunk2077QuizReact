@@ -46,7 +46,7 @@ function Home() {
       <MainTextContainer>
         <StyledHeader> Cyberpunk2077 Quiz</StyledHeader>
       </MainTextContainer>
-      <StyledLink to="/questions">
+      <StyledLink to="/question">
         <StartButton>Start quiz Now</StartButton>
       </StyledLink>
       <MainTextContainer>

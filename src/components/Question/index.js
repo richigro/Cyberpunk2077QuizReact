@@ -77,7 +77,7 @@ function Question() {
       setCorrectAnswersNum(correctAnswersNum + 1);
     }
     setIsAnswerCorrect(foundAnswer.isCorrect);
-    navigate("/questions/feedback");
+    navigate("/feedback");
   };
   return (
     <div>

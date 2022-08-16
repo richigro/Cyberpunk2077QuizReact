@@ -77,9 +77,7 @@ function QuestionFeedback() {
     if (!isLastQuestion) {
       setCurrentQuestionNum(currentQuestionNum + 1);
     }
-    const navigateTo = isLastQuestion
-      ? "/questions/results"
-      : "/questions/question";
+    const navigateTo = isLastQuestion ? "/results" : "/question";
     navigate(navigateTo);
   };
   const currentQuestionObj = QUESTIONS[currentQuestionNum];

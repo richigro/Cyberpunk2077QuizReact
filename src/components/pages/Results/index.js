@@ -72,7 +72,7 @@ function Results() {
     setIsAnswerCorrect(false);
     setCorrectAnswersNum(0);
     // redirect back to the first question
-    navigate("/questions/question");
+    navigate("/question");
   };
 
   const retryButtonText = () => {
