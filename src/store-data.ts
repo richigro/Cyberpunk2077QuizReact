@@ -1,6 +1,5 @@
-let correctAnswers = 0;
-let currentQuestionNumber = 0;
-// questions and answers hard coded
+import { IQuestion } from "./types";
+
 export const QUESTIONS = [
   {
     question: "Who is the developer making Cybepunk 2077?",
@@ -75,8 +74,4 @@ export const QUESTIONS = [
       { name: "The Terminator", isCorrect: true },
     ],
   },
-];
-// stored question number
-// const numberOfQuestions = STORE.length;
-// need to get around 60% to pass
-// const passingGrade = Math.floor((60 * numberOfQuestions) / 100);
+] as Array<IQuestion>;

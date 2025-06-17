@@ -36,7 +36,6 @@ const StyledHeader = styled.h1`
 
 const StyledScoreTracker = styled(ScoreTracker)`
   width: 100%;
-  // padding-left: 2rem;
 `;
 
 const ImageContainer = styled.div`
@@ -48,6 +47,7 @@ const StyledImage = styled.img`
   width: 100%;
   height: auto;
 `;
+
 // !! this is currently not working
 const StyledCyberButton = styled(CyberButton)`
   margin-top: 0;
@@ -61,17 +61,12 @@ const StyledParagraph = styled.p`
   margin-top: 0.5rem;
 `;
 
-function QuestionFeedback() {
+const QuestionFeedback = () => {
   const { currentQuestionNum, setCurrentQuestionNum, isAnswerCorrect } =
     useQuestion();
   const navigate = useNavigate();
   const isLastQuestion = currentQuestionNum + 1 === QUESTIONS.length;
-  console.log(
-    "it this the last question? ",
-    isLastQuestion,
-    currentQuestionNum,
-    QUESTIONS.length
-  );
+  
   const continueQuiz = () => {
     // dont increase question num if is last question
     if (!isLastQuestion) {
@@ -80,11 +75,14 @@ function QuestionFeedback() {
     const navigateTo = isLastQuestion ? "/results" : "/question";
     navigate(navigateTo);
   };
-  const currentQuestionObj = QUESTIONS[currentQuestionNum];
-  const correctAnswer = currentQuestionObj.answers.find(
+  const currentQuestionObj = QUESTIONS[currentQuestionNum] || {question: "Error name", answers: [{isCorrect: false}]};
+  
+  const correctAnswer = currentQuestionObj?.answers.find(
     (answer) => answer.isCorrect === true
-  ).name;
+  )?.name || "Error name";
+
   const imageSource = isAnswerCorrect ? RightImage : WrongImage;
+
   return (
     <MainFeedbackContainer>
       <FeedbackContainer isAnswerCorrect={isAnswerCorrect}>
@@ -107,4 +105,5 @@ function QuestionFeedback() {
     </MainFeedbackContainer>
   );
 }
+
 export default QuestionFeedback;

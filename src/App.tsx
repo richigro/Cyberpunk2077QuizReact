@@ -19,7 +19,7 @@ const MainPageContainer = styled.div`
   overflow-y: auto;
 `;
 
-function App() {
+const App = () => {
   return (
     <MainPageContainer>
       <QuestionTracker />

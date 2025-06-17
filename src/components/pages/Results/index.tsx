@@ -51,7 +51,7 @@ const StyledParagraph = styled.p`
 
 const PASSING_PERCENT = 60; // you can pass with a 60% score.
 
-function Results() {
+const Results = () => {
   const {
     correctAnswersNum,
     setCurrentQuestionNum,
@@ -104,4 +104,5 @@ function Results() {
     </ResultContainer>
   );
 }
+
 export default Results;

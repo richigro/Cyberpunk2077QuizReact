@@ -40,7 +40,8 @@ const TextSeparator = styled.span`
   margin-bottom: 2rem;
 `;
 
-function Home() {
+const Home = () => {
+
   return (
     <HomeContainer>
       <MainTextContainer>
@@ -93,4 +94,5 @@ function Home() {
     </HomeContainer>
   );
 }
+
 export default Home;
