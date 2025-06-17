@@ -11,7 +11,6 @@ const TrackerContainer = styled.div`
 `;
 
 const Section1 = styled.div`
-  // background: blue;
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -19,7 +18,6 @@ const Section1 = styled.div`
 
 const Section2 = styled(Section1)`
   flex-grow: 0;
-  // background: red;
 `;
 
 const StyledNumber = styled.span`
@@ -28,8 +26,13 @@ const StyledNumber = styled.span`
   margin: 0 0.5rem;
 `;
 
-function ScoreTracker({ className }) {
+interface ScoreTrackerProps {
+  className: string;
+}
+
+const ScoreTracker = ({ className }: ScoreTrackerProps) => {
   const { currentQuestionNum, correctAnswersNum } = useQuestion();
+
   return (
     <TrackerContainer className={className}>
       <Section1>
@@ -42,4 +45,5 @@ function ScoreTracker({ className }) {
     </TrackerContainer>
   );
 }
+
 export default ScoreTracker;

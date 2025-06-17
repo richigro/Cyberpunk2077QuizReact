@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-import CyberButton from "../atoms/CyberButton/index.js";
-import ScoreTracker from "../molecules/ScoreTracker/index.js";
+import CyberButton from "../atoms/CyberButton";
+import ScoreTracker from "../molecules/ScoreTracker";
 
 import { useQuestion } from "../../context/QuestionProvider";
 
@@ -56,7 +56,7 @@ const StyledDiv = styled.div`
   margin-left: 1rem;
 `;
 
-function Question() {
+const Question = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState("");
   const {
@@ -65,20 +65,27 @@ function Question() {
     setCorrectAnswersNum,
     correctAnswersNum,
   } = useQuestion();
+
   const currentQuestion = QUESTIONS[currentQuestionNum];
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Here I make the assumption that the question is always found
+    // for simplicity sake
     const foundAnswer = currentQuestion.answers.find(
       (answer) => answer.name === value
-    );
-    console.log("is the answer correct? ", foundAnswer, foundAnswer.isCorrect);
+    ) || {isCorrect: false};
+    
+
     if (foundAnswer.isCorrect) {
       setCorrectAnswersNum(correctAnswersNum + 1);
     }
-    setIsAnswerCorrect(foundAnswer.isCorrect);
+
+    setIsAnswerCorrect(foundAnswer?.isCorrect);
     navigate("/feedback");
   };
+  
   return (
     <div>
       <StyledScoreTracker />
@@ -108,4 +115,5 @@ function Question() {
     </div>
   );
 }
+
 export default Question;

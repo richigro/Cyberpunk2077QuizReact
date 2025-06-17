@@ -34,7 +34,11 @@ const LineConnector = styled.div`
   width: 1rem;
 `;
 
-function QuestionNode({ children }) {
+interface QuestionNodeProps {
+  children: number;
+}
+
+const QuestionNode = ({ children }: QuestionNodeProps) => {
   const { currentQuestionNum } = useQuestion();
   const lastQuestion = QUESTIONS.length;
   const isLastNode = children === lastQuestion;
