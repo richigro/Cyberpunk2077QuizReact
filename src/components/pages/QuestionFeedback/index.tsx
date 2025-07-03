@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import CyberButton from "../../atoms/CyberButton";
 import ScoreTracker from "../../molecules/ScoreTracker";
+import QuestionTracker from "../../organisms/QuestionTracker";
 
 import { useQuestion } from "../../../context/QuestionProvider";
 import { QUESTIONS } from "../../../store-data";
@@ -84,25 +85,28 @@ const QuestionFeedback = () => {
   const imageSource = isAnswerCorrect ? RightImage : WrongImage;
 
   return (
-    <MainFeedbackContainer>
-      <FeedbackContainer isAnswerCorrect={isAnswerCorrect}>
-        <StyledHeader>
-          {isAnswerCorrect ? "You Got It Right!" : "You Got It Wrong"}
-        </StyledHeader>
-        <StyledScoreTracker />
+    <>
+      <QuestionTracker />
+      <MainFeedbackContainer>
+        <FeedbackContainer isAnswerCorrect={isAnswerCorrect}>
+          <StyledHeader>
+            {isAnswerCorrect ? "You Got It Right!" : "You Got It Wrong"}
+          </StyledHeader>
+          <StyledScoreTracker />
 
-        <ImageContainer>
-          <StyledImage src={imageSource} alt="imagge" />
-        </ImageContainer>
-        <StyledParagraph>
-          The correct answer was: {correctAnswer}.
-        </StyledParagraph>
-      </FeedbackContainer>
-      <StyledCyberButton
-        onClick={continueQuiz}
-        buttonText={isLastQuestion ? "See results" : "Next Question"}
-      />
-    </MainFeedbackContainer>
+          <ImageContainer>
+            <StyledImage src={imageSource} alt="imagge" />
+          </ImageContainer>
+          <StyledParagraph>
+            The correct answer was: {correctAnswer}.
+          </StyledParagraph>
+        </FeedbackContainer>
+        <StyledCyberButton
+          onClick={continueQuiz}
+          buttonText={isLastQuestion ? "See results" : "Next Question"}
+        />
+      </MainFeedbackContainer>
+    </>
   );
 }
 

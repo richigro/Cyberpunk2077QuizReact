@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Home from "./components/pages/Home";
 import Results from "./components/pages/Results";
 import QuestionFeedback from "./components/pages/QuestionFeedback";
-import QuestionTracker from "./components/organisms/QuestionTracker";
 import Question from "./components/Question";
 
 const MainPageContainer = styled.div`
@@ -21,7 +20,6 @@ const MainPageContainer = styled.div`
 const App = () => {
   return (
     <MainPageContainer>
-      <QuestionTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="question" element={<Question />} />

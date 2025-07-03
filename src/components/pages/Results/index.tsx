@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import CyberButton from "../../atoms/CyberButton";
 import ScoreTracker from "../../molecules/ScoreTracker";
+import QuestionTracker from "../../organisms/QuestionTracker";
 
 import { useQuestion } from "../../../context/QuestionProvider";
 import { QUESTIONS } from "../../../store-data";
@@ -84,24 +85,27 @@ const Results = () => {
   };
 
   return (
-    <ResultContainer hasPassedQuiz={hasPassedQuiz}>
-      <InsideContainer hasPassedQuiz={hasPassedQuiz}>
-        <StyledHeader>
-          {hasPassedQuiz ? "You Passed the quiz!" : "You failed the quiz"}
-        </StyledHeader>
-        <StyledScoreTracker />
-        <ImageContainer>
-          <StyledImage src={resultImage} alt="result-image" />
-        </ImageContainer>
-        <StyledParagraph>
-          You got {correctAnswersNum} correct answers.
-        </StyledParagraph>
-        <StyledParagraph>
-          {hasPassedQuiz ? "Good Job!" : "Better Luck Next Time!"}
-        </StyledParagraph>
-      </InsideContainer>
-      <CyberButton onClick={handleReset} buttonText={retryButtonText()} />
-    </ResultContainer>
+    <>
+      <QuestionTracker />
+      <ResultContainer hasPassedQuiz={hasPassedQuiz}>
+        <InsideContainer hasPassedQuiz={hasPassedQuiz}>
+          <StyledHeader>
+            {hasPassedQuiz ? "You Passed the quiz!" : "You failed the quiz"}
+          </StyledHeader>
+          <StyledScoreTracker />
+          <ImageContainer>
+            <StyledImage src={resultImage} alt="result-image" />
+          </ImageContainer>
+          <StyledParagraph>
+            You got {correctAnswersNum} correct answers.
+          </StyledParagraph>
+          <StyledParagraph>
+            {hasPassedQuiz ? "Good Job!" : "Better Luck Next Time!"}
+          </StyledParagraph>
+        </InsideContainer>
+        <CyberButton onClick={handleReset} buttonText={retryButtonText()} />
+      </ResultContainer>
+    </>
   );
 }
 
