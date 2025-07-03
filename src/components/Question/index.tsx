@@ -2,8 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
+
 import CyberButton from "../atoms/CyberButton";
 import ScoreTracker from "../molecules/ScoreTracker";
+import QuestionTracker from "../organisms/QuestionTracker";
 
 import { useQuestion } from "../../context/QuestionProvider";
 
@@ -87,6 +89,8 @@ const Question = () => {
   };
   
   return (
+    <>
+    <QuestionTracker />
     <div>
       <StyledScoreTracker />
       <div>
@@ -113,6 +117,7 @@ const Question = () => {
         <StyledCyberButton buttonText={"Submit"} />
       </StyledForm>
     </div>
+    </>
   );
 }
 
