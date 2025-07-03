@@ -7,6 +7,7 @@ import { QUESTIONS } from "../../../store-data";
 
 const QuestionTrackerContainer = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 const QuestionTracker = () => {
