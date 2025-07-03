@@ -10,12 +10,11 @@ import Question from "./components/Question";
 const MainPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 40rem;
+  width: 43rem;
   background: rgba(0, 0, 0, 0.76);
   height: 100%;
-  padding: 0 2rem;
+  padding: 2rem;
   overflow-y: auto;
 `;
 

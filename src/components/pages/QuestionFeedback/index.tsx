@@ -12,7 +12,7 @@ import WrongImage from "../../../images/screen-its-a-deal-en.jpg";
 const MainFeedbackContainer = styled.div`
   margin: 3.5rem 0;
   height: 570px;
-  width: 590px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;

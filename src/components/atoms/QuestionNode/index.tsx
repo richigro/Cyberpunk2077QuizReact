@@ -16,8 +16,8 @@ const Node = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.8rem;
+  height: 3.8rem;
 
   background: ${({ isCurrentQuestion, seenBefore }) =>
     isCurrentQuestion || seenBefore ? "rgb(253 238 6)" : "none"};

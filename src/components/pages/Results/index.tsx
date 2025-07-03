@@ -11,7 +11,7 @@ import SuccessImage from "../../../images/screen-high-speed-high-stakes-en.jpg";
 
 const ResultContainer = styled.div`
   height: 570px;
-  width: 590px;
+  width: 100%;
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
