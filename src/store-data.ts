@@ -1,6 +1,6 @@
 import { IQuestion } from "./types";
 
-export const QUESTIONS = [
+export const QUESTIONS: Array<IQuestion> = [
   {
     question: "Who is the developer making Cybepunk 2077?",
     answers: [
@@ -74,4 +74,4 @@ export const QUESTIONS = [
       { name: "The Terminator", isCorrect: true },
     ],
   },
-] as Array<IQuestion>;
+];

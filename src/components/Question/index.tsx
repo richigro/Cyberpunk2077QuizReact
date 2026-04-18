@@ -70,7 +70,7 @@ const Question = () => {
 
   const currentQuestion = QUESTIONS[currentQuestionNum];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Here I make the assumption that the question is always found
@@ -92,7 +92,7 @@ const Question = () => {
     <>
     <QuestionTracker />
     <div>
-      <StyledScoreTracker />
+      <StyledScoreTracker className=""/>
       <div>
         <StyledHeader>{currentQuestion.question}</StyledHeader>
       </div>
@@ -114,7 +114,7 @@ const Question = () => {
             </StyledLabel>
           );
         })}
-        <StyledCyberButton buttonText={"Submit"} />
+        <StyledCyberButton buttonText={"Submit"}  onClick={() => {}}/>
       </StyledForm>
     </div>
     </>

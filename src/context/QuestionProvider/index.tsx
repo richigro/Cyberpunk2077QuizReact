@@ -34,6 +34,8 @@ const QuestionProvider = ({children}: QuestionProviderProps) => {
     );
 }
 
+QuestionContext.displayName = 'QuestionContext';
+
 const useQuestion =  () => {
   const context = useContext(QuestionContext);
   if (!context) {
