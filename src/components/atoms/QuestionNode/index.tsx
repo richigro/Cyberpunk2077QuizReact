@@ -9,7 +9,12 @@ const NodeContainer = styled.div`
   margin: 1rem 0;
 `;
 
-const Node = styled.div`
+interface NodeProps {
+  isCurrentQuestion: boolean;
+  seenBefore: boolean;
+}
+
+const Node = styled.div<NodeProps>`
   cursor: not-allowed;
   border: 2px solid
     ${({ isCurrentQuestion }) => (isCurrentQuestion ? "black" : "white")};

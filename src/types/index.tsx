@@ -4,7 +4,6 @@ export interface IAnswer {
 }
 
 export interface IQuestion {
-    question: string;
-    answers: Array<IAnswer>;
-  
+  question: string;
+  answers: Array<IAnswer>;
 }

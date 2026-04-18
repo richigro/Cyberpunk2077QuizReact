@@ -74,7 +74,6 @@ const Question = () => {
     e.preventDefault();
 
     // Here I make the assumption that the question is always found
-    // for simplicity sake
     const foundAnswer = currentQuestion.answers.find(
       (answer) => answer.name === value
     ) || {isCorrect: false};

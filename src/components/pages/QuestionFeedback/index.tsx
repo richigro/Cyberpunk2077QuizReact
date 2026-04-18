@@ -17,8 +17,11 @@ const MainFeedbackContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+interface FeedbackContainerProps {
+  isAnswerCorrect: boolean;
+}
 
-const FeedbackContainer = styled.div`
+const FeedbackContainer = styled.div<FeedbackContainerProps>`
   background: ${({ isAnswerCorrect }) =>
     isAnswerCorrect ? "#22edfc" : "#ff003c"};
   color: ${({ isAnswerCorrect }) => (isAnswerCorrect ? "black" : "white")};
@@ -92,7 +95,7 @@ const QuestionFeedback = () => {
           <StyledHeader>
             {isAnswerCorrect ? "You Got It Right!" : "You Got It Wrong"}
           </StyledHeader>
-          <StyledScoreTracker />
+          <StyledScoreTracker className=""/>
 
           <ImageContainer>
             <StyledImage src={imageSource} alt="imagge" />
